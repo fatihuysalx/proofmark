@@ -1,0 +1,6 @@
+colorama==0.4.6
+numpy==2.2.4
+opencv-python==4.11.0.86
+pillow==11.2.1
+pyzbar==0.1.9
+qrcode==8.1
