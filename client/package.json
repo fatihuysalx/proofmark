@@ -16,6 +16,7 @@
     "@mui/material": "^6.4.8",
     "aos": "^2.3.4",
     "esbuild": "^0.25.0",
+    "framer-motion": "^12.7.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.3.0"

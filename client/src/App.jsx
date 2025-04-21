@@ -3,6 +3,10 @@ import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
 import Home from "./pages/Home";
 import About from "./pages/About";
+import QRScanner from "./pages/QRScanner";
+import Blockchain from "./pages/Blockchain";
+import Contact from "./pages/Contact";
+
 
 function App() {
   return (
@@ -15,9 +19,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/qr" element={<h1>QR Doğrulama</h1>} />
-          <Route path="/blockchain" element={<h1>Blockchain</h1>} />
-          <Route path="/contact" element={<h1>İletişim</h1>} />
+          <Route path="/qr" element={<QRScanner />} />
+          <Route path="/blockchain" element={<Blockchain />} />
+          <Route path="/contact" element={<Contact />} />       
         </Routes>
       </div>
 

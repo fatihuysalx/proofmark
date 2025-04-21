@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+:root {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-light: #f1f5f9;
+  --primary: #14b8a6;
+  --accent: #38bdf8;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;

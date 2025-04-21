@@ -1,3 +1,4 @@
+import React from "react";
 import "./About.css";
 import fatihLogo from "../assets/fatih.jpg";
 import solanaLogo from "../assets/solana.jpg";
@@ -9,9 +10,10 @@ function About() {
     <div className="about-container">
       {/* Hero Section */}
       <section className="about-hero" data-aos="fade-up">
-        <h1>Biz Kimiz?</h1>
-        <p>Blockchain tabanlı tedarik zinciri çözümleri sunan yenilikçi bir ekibiz</p>
-      </section>
+  <h1>Biz Kimiz?</h1>
+  <p>Blockchain tabanlı tedarik zinciri çözümleri sunan yenilikçi bir ekibiz</p>
+</section>
+
 
       {/* Misyon & Vizyon */}
       <section className="project-mission" data-aos="fade-up">
@@ -33,6 +35,7 @@ function About() {
 </section>
 
 
+
       {/* Ekip */}
       <section className="team" data-aos="fade-right">
   <h2>Ekibimiz</h2>
@@ -47,6 +50,7 @@ function About() {
     </div>
   </div>
 </section>
+
 
 
       {/* Tarihçe */}
