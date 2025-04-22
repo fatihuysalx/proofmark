@@ -8,6 +8,7 @@ function Home() {
   <h1>Web3 ile Tedarik Zincirini Yeniden Şekillendir</h1>
   <p>Merkeziyetsiz, güvenilir ve şeffaf bir tedarik zinciri yönetimi.</p>
   <a href="#features" className="btn">Keşfet</a>
+  <a href="#features" className="btn">QR okut</a>
 </section>
 
 
