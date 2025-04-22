@@ -23,8 +23,8 @@ function Footer() {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">İletişim</Typography>
-            <Typography>Email: info@proofmarker.io</Typography>
-            <Typography>Tel: +90 123 456 7890</Typography>
+            <Typography>Email: fatihmuhammetuysal@gmail.com</Typography>
+            <Typography>Tel: +90 54249239</Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">Bizi Takip Edin</Typography>

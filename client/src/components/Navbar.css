@@ -100,3 +100,51 @@
     text-shadow: 0 0 5px #00ffcc;
   }
   
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links.open {
+    max-height: 300px;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 70px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+    }
+  
+    .nav-links li {
+      margin: 15px 0;
+    }
+  }
+  
+  /* Navbar’ın aşağıya geçişte içerik üstünü kapatmaması için: */
+  body {
+    padding-top: 80px; /* Navbar yüksekliği kadar sabit boşluk */
+  }
+  

@@ -1,25 +1,33 @@
 import React from "react";
 import "./QRScanner.css";
-import { Typography } from "@mui/material";
 
-const QRScanner = () => {
+function QRScanner() {
   return (
-    <div className="qr-page">
-      <Typography variant="h5" component="h2" className="qr-title">
-        📷 QR Kodunuzu Tarayın
-      </Typography>
+    <div className="qr-container">
+      <section className="qr-hero" data-aos="fade-up">
+        <h1>Ürününü Doğrula</h1>
+        <p>Ürünün üzerindeki QR kodu tarayarak orijinalliğini kontrol et.</p>
+      </section>
 
-      <div className="qr-frame">
+      <section className="qr-display" data-aos="zoom-in">
         <div className="qr-box">
-          <div className="qr-laser"></div>
+          <div className="qr-frame">
+            <p>📷 QR Kodu Kameraya Getirin</p>
+            <div className="scanner-line" />
+          </div>
         </div>
-      </div>
+      </section>
 
-      <Typography variant="body2" className="qr-instruction">
-        Kamerayı QR kodun üzerine getirin. Ürün bilgileri otomatik olarak yüklenecektir.
-      </Typography>
+      <section className="qr-info" data-aos="fade-up">
+        <h2>Neden QR Kod Tarama?</h2>
+        <ul>
+          <li>✅ Gerçek ürün mü anında öğren</li>
+          <li>🔐 Blockchain tabanlı güvenilirlik</li>
+          <li>🧾 Sahiplik ve geçmişe erişim</li>
+        </ul>
+      </section>
     </div>
   );
-};
+}
 
 export default QRScanner;
