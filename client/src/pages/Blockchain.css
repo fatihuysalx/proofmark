@@ -1,193 +1,192 @@
 /* Genel Ayarlar */
 .about-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow-x: hidden;
-  }
-  
-  .blockchain-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    box-sizing: border-box;
-    color: white;
-  }
-  .content {
-    width: 100vw;
-    min-height: 100vh;
-    background-color: #121212;
-  }
-  
-  
-  /* Hero Bölümü */
-  .blockchain-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #00ffcc, #009977);
-    color: #000000;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.blockchain-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  color: white;
+}
+.content {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #121212;
+}
+
+
+/* Hero Bölümü */
+.blockchain-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #00ffcc, #009977);
+  color: #000000;
+}
+
+.blockchain-hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blockchain-hero p {
+  font-size: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Sistem Nasıl Çalışıyor Bölümü */
+.system-how-it-works {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.system-how-it-works h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.system-steps {
+  list-style: decimal inside;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Blockchain Destekleri */
+.blockchain-support {
+  padding: 60px 20px;
+  background-color: #121212;
+  text-align: center;
+}
+
+.blockchain-support h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.blockchain-support p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blockchain Seçenekleri */
+.blockchain-option {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 800px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blockchain-option:hover {
+  transform: scale(1.02);
+}
+
+.blockchain-option h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.blockchain-option h4 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.blockchain-option ul {
+  list-style: disc inside;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.blockchain-option p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Solana ve Stellar Özel Renkler */
+.blockchain-option.solana {
+  border-left: 5px solid #00ffcc;
+}
+
+.blockchain-option.stellar {
+  border-left: 5px solid #1e90ff;
+}
+
+/* Karşılaştırma Tablosu */
+.blockchain-comparison {
+  padding: 60px 20px;
+  background-color: #121212;
+  text-align: center;
+}
+
+.blockchain-comparison h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.comparison-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #333333;
+  padding: 15px;
+  text-align: center;
+}
+
+.comparison-table th {
+  background-color: #00ffcc;
+  color: #000000;
+  font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: #1f1f1f;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
   .blockchain-hero h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .blockchain-hero p {
-    font-size: 20px;
-    max-width: 800px;
-    line-height: 1.6;
-  }
-  
-  /* Sistem Nasıl Çalışıyor Bölümü */
-  .system-how-it-works {
-    padding: 60px 20px;
-    background-color: #1a1a1a;
-    text-align: center;
-  }
-  
-  .system-how-it-works h2 {
     font-size: 36px;
-    margin-bottom: 30px;
   }
-  
-  .system-steps {
-    list-style: decimal inside;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 1.8;
-    font-size: 18px;
-  }
-  
-  /* Blockchain Destekleri */
-  .blockchain-support {
-    padding: 60px 20px;
-    background-color: #121212;
-    text-align: center;
-  }
-  
-  .blockchain-support h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .blockchain-support p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  /* Blockchain Seçenekleri */
-  .blockchain-option {
-    padding: 60px 20px;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    margin: 30px auto;
-    max-width: 800px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .blockchain-option:hover {
-    transform: scale(1.02);
-  }
-  
-  .blockchain-option h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .blockchain-option h4 {
-    font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .blockchain-option ul {
-    list-style: disc inside;
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  
+
+  .blockchain-hero p,
+  .system-steps,
+  .blockchain-support p,
   .blockchain-option p {
     font-size: 16px;
-    margin-bottom: 10px;
   }
-  
-  /* Solana ve Stellar Özel Renkler */
-  .blockchain-option.solana {
-    border-left: 5px solid #00ffcc;
-  }
-  
-  .blockchain-option.stellar {
-    border-left: 5px solid #1e90ff;
-  }
-  
-  /* Karşılaştırma Tablosu */
-  .blockchain-comparison {
-    padding: 60px 20px;
-    background-color: #121212;
-    text-align: center;
-  }
-  
-  .blockchain-comparison h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  .comparison-table {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #1a1a1a;
-    color: #ffffff;
-  }
-  
+
   .comparison-table th,
   .comparison-table td {
-    border: 1px solid #333333;
-    padding: 15px;
-    text-align: center;
+    padding: 10px;
+    font-size: 14px;
   }
-  
-  .comparison-table th {
-    background-color: #00ffcc;
-    color: #000000;
-    font-weight: bold;
-  }
-  
-  .comparison-table tr:nth-child(even) {
-    background-color: #1f1f1f;
-  }
-  
-  /* Responsive Tasarım */
-  @media (max-width: 768px) {
-    .blockchain-hero h1 {
-      font-size: 36px;
-    }
-  
-    .blockchain-hero p,
-    .system-steps,
-    .blockchain-support p,
-    .blockchain-option p {
-      font-size: 16px;
-    }
-  
-    .comparison-table th,
-    .comparison-table td {
-      padding: 10px;
-      font-size: 14px;
-    }
-  }
-  
+}

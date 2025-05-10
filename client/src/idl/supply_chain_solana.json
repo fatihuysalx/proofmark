@@ -1,0 +1,26 @@
+{
+  "address": "HyDJxgn8FpZPyRhMbZo5KitCXPXfSw9W1FnRrzm1ph53",
+  "metadata": {
+    "name": "supply_chain_solana",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [],
+      "args": []
+    }
+  ]
+}

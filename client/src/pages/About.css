@@ -1,5 +1,234 @@
 /* Genel */
 .about-container {
+  text-align: center;
+  color: white;
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Hero Bölümü */
+.about-hero {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('../assets/about-bg.jpg') no-repeat center center / cover;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  max-width: 600px;
+}
+
+/* Misyon & Vizyon */
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: #1a1a1a;
+}
+
+.mv-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mv-card:hover {
+  transform: scale(1.03);
+}
+
+.mv-card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-mission {
+  padding: 50px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.mission-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.mission-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Ekip */
+.team {
+  padding: 50px;
+  background-color: #121212;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.member {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+.member-img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.member h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.member p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #aaa;
+}
+
+/* Tarihçe */
+.timeline {
+  padding: 50px;
+  background-color: #1a1a1a;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto 0;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.timeline-date {
+  width: 120px;
+  padding: 10px;
+  background: #00ffcc;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  text-align: left;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #00ffcc;
+}
+
+/* Ortaklar */
+.partners {
+  padding: 50px;
+  background-color: #121212;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  width: 150px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 5px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* CTA */
+.about-cta {
+  padding: 50px;
+  background: #00ffcc;
+  color: black;
+}
+
+.about-cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #121212;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+/* Genel */
+.about-container {
     text-align: center;
     color: white;
     background-color: #121212;

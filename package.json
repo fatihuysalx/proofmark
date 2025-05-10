@@ -7,7 +7,18 @@
         "build": "vite build",
         "preview": "vite preview"
     },
-    "devDependencies": {
-        "vite": "^6.3.2"
-    }
+
+    
+  "devDependencies": {
+    "@types/chai": "^5.2.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.15.3",
+    "ts-mocha": "^11.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.2"
+
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1"
+  }
 }

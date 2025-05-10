@@ -6,6 +6,8 @@ import About from "./pages/About";
 import QRScanner from "./pages/QRScanner";
 import Blockchain from "./pages/Blockchain";
 import Contact from "./pages/Contact";
+import AddProductButton from "./components/AddProductButton";
+
 
 
 function App() {
@@ -24,6 +26,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />       
         </Routes>
       </div>
+
+      <div>
+      <h1>🧬 ProofMark Ürün Girişi</h1>
+      <AddProductButton />
+    </div>
 
       {/* Footer Her Sayfada Gösterilecek */}
       <Footer />

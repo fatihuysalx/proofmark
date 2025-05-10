@@ -1,164 +1,163 @@
 /* Genel */
 .home-container {
-    text-align: center;
-    color: white;
-    background-color: #121212;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Hero Bölümü */
-  .hero {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: url('../assets/web3-bg.jpg') no-repeat center center / cover;
-    backdrop-filter: blur(5px);
-    padding: 50px;
-    box-sizing: border-box;
-  }
+  text-align: center;
+  color: white;
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+}
 
-  .home-container {
-    text-align: center;
-    color: white;
-    background-color: #121212;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow-x: hidden;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 20px;
-    max-width: 600px;
-  }
-  
-  .btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #00ffcc;
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: #009977;
-  }
-  
-  /* Özellikler */
-  .features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px;
-  }
-  
-  .feature-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .feature-card:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Nasıl Çalışır */
-  .how-it-works {
-    padding: 50px;
-  }
-  
-  .steps {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .step {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .step:hover {
-    transform: scale(1.05);
-  }
-  
-  .step span {
-    display: block;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .proofmarker {
-    padding: 50px;
-    background-color: #1f1f1f;
-    color: white;
-    text-align: center;
-  }
-  
-  .chart {
-    padding: 50px;
-    background-color: #282828;
-    color: white;
-    text-align: center;
-  }
-  
-  .chart-flow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-  }
-  
-  .chart-step {
-    background-color: #3a3a3a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    font-size: 16px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-  
-  .chart-step span {
-    display: block;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .chart-arrow {
-    font-size: 28px;
-    color: #00ffcc;
-  }
-  
-  /* CTA Butonu */
-  .cta {
-    padding: 50px;
-    background: #00ffcc;
-    color: black;
-  }
-  
-  .cta h2 {
-    font-size: 32px;
-  }
-  
+/* Hero Bölümü */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/web3-bg.jpg') no-repeat center center / cover;
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.home-container {
+  text-align: center;
+  color: white;
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00ffcc;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #009977;
+}
+
+/* Özellikler */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Nasıl Çalışır */
+.how-it-works {
+  padding: 50px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.step:hover {
+  transform: scale(1.05);
+}
+
+.step span {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.proofmarker {
+  padding: 50px;
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+}
+
+.chart {
+  padding: 50px;
+  background-color: #282828;
+  color: white;
+  text-align: center;
+}
+
+.chart-flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.chart-step {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.chart-step span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.chart-arrow {
+  font-size: 28px;
+  color: #00ffcc;
+}
+
+/* CTA Butonu */
+.cta {
+  padding: 50px;
+  background: #00ffcc;
+  color: black;
+}
+
+.cta h2 {
+  font-size: 32px;
+}

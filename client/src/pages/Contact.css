@@ -1,104 +1,103 @@
 .contact-container {
-    text-align: center;
-    color: white;
-    background-color: #121212;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow-x: hidden;
-  }
-  
-  .contact-hero {
-    width: 100vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('../assets/contact-bg.jpg') no-repeat center center / cover;
-    padding: 50px;
-    box-sizing: border-box;
-  }
-  
-  .contact-hero h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .contact-hero p {
-    font-size: 20px;
-    max-width: 600px;
-  }
-  
-  .contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 50px;
-    background-color: #1a1a1a;
-    flex-wrap: wrap;
-  }
-  
-  .contact-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    width: 300px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .contact-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .contact-card h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .contact-card p {
-    font-size: 16px;
-    color: #ccc;
-  }
-  
-  .contact-card a {
-    color: #00ffcc;
-    text-decoration: none;
-  }
-  
-  .contact-cta {
-    padding: 50px;
-    background: #00ffcc;
-    color: black;
-  }
-  
-  .contact-cta h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .contact-cta p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto 30px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #121212;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: #333;
-    transform: translateY(-3px);
-  }
-  
+  text-align: center;
+  color: white;
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.contact-hero {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('../assets/contact-bg.jpg') no-repeat center center / cover;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.contact-hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 20px;
+  max-width: 600px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: #1a1a1a;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+}
+
+.contact-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.contact-card a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.contact-cta {
+  padding: 50px;
+  background: #00ffcc;
+  color: black;
+}
+
+.contact-cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-cta p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #121212;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
