@@ -1,0 +1,79 @@
+.qr-container {
+  margin-top: 40px;
+  color: white;
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+  padding-bottom: 50px;
+}
+
+.qr-hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background: linear-gradient(to bottom, #00ffcc, #009977);
+  color: black;
+}
+
+.qr-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.qr-hero p {
+  font-size: 18px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.qr-display {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.qr-box {
+  width: 300px;
+  height: 300px;
+  background-color: #000;
+  border: 8px solid #00ffcc;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+}
+
+.qr-frame {
+  text-align: center;
+  color: #00ffcc;
+  padding-top: 120px;
+  font-size: 18px;
+}
+
+.scanner-line {
+  width: 100%;
+  height: 3px;
+  background: #00ffcc;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  animation: scan 2s infinite;
+}
+
+@keyframes scan {
+  0% { top: 10%; }
+  50% { top: 90%; }
+  100% { top: 10%; }
+}
+
+.qr-info {
+  text-align: center;
+  padding: 30px;
+}
+
+.qr-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.qr-info li {
+  font-size: 18px;
+  margin: 10px 0;
+}

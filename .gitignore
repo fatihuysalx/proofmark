@@ -1,0 +1,30 @@
+# node modules
+**/node_modules/
+
+# log dosyaları
+*.log
+
+# environment ve config
+.env
+.env.local
+
+# build ve dist dosyaları
+**/dist/
+**/build/
+
+# IDE ve editör dosyaları
+.vscode/
+.idea/
+
+# sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# test ledger ve snapshot dosyaları
+test-ledger/
+**/rocksdb/
+**/snapshot/
+
+# yarn veya npm lock dosyaları (opsiyonel)
+yarn.lock
+pnpm-lock.yaml
