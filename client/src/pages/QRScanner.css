@@ -77,3 +77,11 @@
   font-size: 18px;
   margin: 10px 0;
 }
+
+#reader {
+  border: 8px solid #00ffcc;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0 0 20px #00ffcc88;
+}

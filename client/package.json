@@ -17,6 +17,7 @@
     "aos": "^2.3.4",
     "esbuild": "^0.25.0",
     "framer-motion": "^12.7.4",
+    "html5-qrcode": "^2.3.8",
     "js-sha256": "^0.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
