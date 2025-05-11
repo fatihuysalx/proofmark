@@ -1,0 +1,32 @@
+node_modules/
+dist/
+.env
+test-ledger/
+supply-chain-solana/
+
+# log dosyaları
+logs
+*.log
+
+# ortam/env ve config
+.env.local
+
+# build ve dist dosyaları
+/build/
+
+# IDE ve editor dosyaları
+.vscode/
+.idea/
+
+# sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# test-ledger ve snapshot dosyaları
+test-ledger/
+**/rocksdb/
+**/snapshot/
+
+# yarn veya npm lock dosyaları (opsiyonel)
+yarn.lock
+package-lock.json
