@@ -6,36 +6,22 @@ ProofMark aims to verify the authenticity of physical products through QR codes,
 
 ---
 
-## 📊 How the System Works (Overview)
+## 📈 How the System Works (Overview)
 
-```mermaid
-flowchart TD
-    User[Consumer scans QR code or uploads image]
-    Frontend[Frontend (React)]
-    Backend[Backend (Express + Node.js)]
-    MongoDB[(MongoDB)]
-    SmartContract[[Future: Solana Smart Contract]]
-
-    User --> Frontend
-    Frontend --> Backend
-    Backend --> MongoDB
-    Backend --> Frontend
-    Frontend --> User
-    Backend --> SmartContract
-
+![System Flowchart](./client/src/assets/system-flowchart.png)
 
 ---
 
 ## 🌐 Live Preview Screenshots
 
-> ✅ Visual references of the platform: Homepage, Scan Page, Blockchain Page, Workflow Explanation, Contact Page, and ProofMark Logo.
+> Visual references of the platform: Homepage, Scan Page, Blockchain Page, Workflow Explanation, Contact Page, and ProofMark Logo.
 
-![Homepage](./screenshots/home.png)
-![Scan Page](./screenshots/scan.png)
-![Blockchain Page](./screenshots/blockchain.png)
-![Workflow Page](./screenshots/workflow.png)
-![Contact Page](./screenshots/contact.png)
-![ProofMark Logo](./screenshots/logo.png)
+![Homepage](./client/src/assets/5861645132653250545.jpg)
+![About Us](./client/src/assets/5861645132653250546.jpg)
+![Scan QR](./client/src/assets/5861645132653250547.jpg)
+![Blockchain Guarantee](./client/src/assets/5861645132653250548.jpg)
+![Contact Page](./client/src/assets/5861645132653250549.jpg)
+![Logo](./client/src/assets/logo.jpg)
 
 ---
 
@@ -87,15 +73,15 @@ proofmarkFinal/
 ### 🚀 Start Project
 
 ```bash
-# 1. MongoDB başlat
+# 1. Start MongoDB
 mongod
 
-# 2. Backend başlat
+# 2. Start Backend
 cd backend
 npm install
 node server.js
 
-# 3. Frontend başlat
+# 3. Start Frontend
 cd client
 npm install
 npm run dev
@@ -105,35 +91,35 @@ npm run dev
 
 ## 📦 API Routes Summary
 
-### 📥 POST /generate-qr
+### 📅 POST /generate-qr
 
 Generate a new QR code with hashed content.
 
-### 📥 POST /products
+### 📅 POST /products
 
 Add a new product (with hash & description).
 
-### 📥 POST /upload
+### 📅 POST /upload
 
 Upload a file (used for QR code image reading).
 
-### 📥 POST /scans
+### 📅 POST /scans
 
 Save scan history (stage: production, warehouse, consumer).
 
-### 📤 GET /products
+### 📄 GET /products
 
 List all products.
 
-### 📤 GET /products/\:qrHash
+### 📄 GET /products/\:qrHash
 
 Find a specific product.
 
-### 📤 GET /scans/\:qrCode
+### 📄 GET /scans/\:qrCode
 
 View full scan history.
 
-### 📤 GET /qr/\:qrHash
+### 📄 GET /qr/\:qrHash
 
 Get a QR image.
 
@@ -155,7 +141,7 @@ Project was developed by a solo developer with iterative support and idea shapin
 
 * [ ] 📱 Mobile optimization
 * [ ] 🔐 NFT minting on Solana for each product
-* [ ] 🛁 Real-time socket-based scan tracking
+* [ ] 📡 Real-time socket-based scan tracking
 * [ ] 🎨 Admin dashboard with scan heatmaps
 
 ---
