@@ -85,3 +85,57 @@
   background-color: black;
   box-shadow: 0 0 20px #00ffcc88;
 }
+
+.qr-container {
+  text-align: center;
+  background-color: #121212;
+  color: white;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.qr-hero {
+  margin-bottom: 20px;
+}
+
+.btn, .scan-btn {
+  background-color: #00ffcc;
+  border: none;
+  color: black;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #009977;
+}
+
+.file-upload {
+  margin-top: 20px;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.qr-box {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border: 6px solid #00ffcc;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+}
+
+.scan-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}

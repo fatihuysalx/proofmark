@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 
 export default defineConfig({
-  base: '/proofmark/', // 🔥 BURASI ÇOK ÖNEMLİ
+  base: '/', // 🔥 BURASI ÇOK ÖNEMLİ
   plugins: [react()],
   optimizeDeps: {
     esbuildOptions: {
@@ -18,6 +18,13 @@ export default defineConfig({
       ]
     }
   },
+
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+    strictPort: true,
+  },
+
   resolve: {
     alias: {
       buffer: 'buffer',
