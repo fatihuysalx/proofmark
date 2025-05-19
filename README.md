@@ -30,7 +30,12 @@ flowchart TD
 
 > ✅ Visual references of the platform: Homepage, Scan Page, Blockchain Page, Workflow Explanation, Contact Page, and ProofMark Logo.
 
-<!-- Add Screenshots Here -->
+![Homepage](./screenshots/home.png)
+![Scan Page](./screenshots/scan.png)
+![Blockchain Page](./screenshots/blockchain.png)
+![Workflow Page](./screenshots/workflow.png)
+![Contact Page](./screenshots/contact.png)
+![ProofMark Logo](./screenshots/logo.png)
 
 ---
 
@@ -134,7 +139,7 @@ Get a QR image.
 
 ---
 
-## 🧠 Special Contributions & AI Use
+## 🧐 Special Contributions & AI Use
 
 > **ProofMark's database structure and scan logic were significantly refined with AI assistance**, especially for multi-stage scanning.
 
@@ -150,7 +155,7 @@ Project was developed by a solo developer with iterative support and idea shapin
 
 * [ ] 📱 Mobile optimization
 * [ ] 🔐 NFT minting on Solana for each product
-* [ ] 📡 Real-time socket-based scan tracking
+* [ ] 🛁 Real-time socket-based scan tracking
 * [ ] 🎨 Admin dashboard with scan heatmaps
 
 ---
@@ -161,12 +166,12 @@ MIT License. You can use, modify, or contribute freely.
 
 ---
 
-## 📎 Developer Info & Contacts
+## 📌 Developer Info & Contacts
 
 | Platform     | Link                                                                                               |
 | ------------ | -------------------------------------------------------------------------------------------------- |
 | 🔗 Twitter/X | [https://x.com/ProofMarkChain](https://x.com/ProofMarkChain)                                       |
-| 👔 LinkedIn  | [https://www.linkedin.com/in/fatihmuhammetuysal/](https://www.linkedin.com/in/fatihmuhammetuysal/) |
+| 💼 LinkedIn  | [https://www.linkedin.com/in/fatihmuhammetuysal/](https://www.linkedin.com/in/fatihmuhammetuysal/) |
 | 💻 GitHub    | [https://github.com/fatihuysalx](https://github.com/fatihuysalx)                                   |
 
 > Feel free to fork the project or reach out if you plan to extend it.
