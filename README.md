@@ -6,22 +6,21 @@ ProofMark aims to verify the authenticity of physical products through QR codes,
 
 ---
 
-## 📈 How the System Works (Overview)
+## 📊 How the System Works (Overview)
 
-![System Flowchart](./client/src/assets/system-flowchart.png)
+![System Flowchart](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/system-diagram.png)
 
 ---
 
 ## 🌐 Live Preview Screenshots
 
-> Visual references of the platform: Homepage, Scan Page, Blockchain Page, Workflow Explanation, Contact Page, and ProofMark Logo.
+> ✅ Visual references of the platform: Homepage, Scan Page, Blockchain Page, Workflow Explanation, Contact Page, and ProofMark Logo.
 
-![Homepage](./client/src/assets/5861645132653250545.jpg)
-![About Us](./client/src/assets/5861645132653250546.jpg)
-![Scan QR](./client/src/assets/5861645132653250547.jpg)
-![Blockchain Guarantee](./client/src/assets/5861645132653250548.jpg)
-![Contact Page](./client/src/assets/5861645132653250549.jpg)
-![Logo](./client/src/assets/logo.jpg)
+|                                                                                                                            |                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| ![Homepage](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/5861645132653250545.jpg)     | ![About Us](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/5861645132653250546.jpg)             |
+| ![Scan QR](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/5861645132653250547.jpg)      | ![Blockchain Guarantee](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/5861645132653250548.jpg) |
+| ![Contact Page](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/5861645132653250549.jpg) | ![Logo](https://raw.githubusercontent.com/fatihuysalx/proofmark/main/client/public/images/logo.jpg)                                |
 
 ---
 
@@ -73,15 +72,15 @@ proofmarkFinal/
 ### 🚀 Start Project
 
 ```bash
-# 1. Start MongoDB
+# 1. MongoDB başlat
 mongod
 
-# 2. Start Backend
+# 2. Backend başlat
 cd backend
 npm install
 node server.js
 
-# 3. Start Frontend
+# 3. Frontend başlat
 cd client
 npm install
 npm run dev
@@ -107,25 +106,25 @@ Upload a file (used for QR code image reading).
 
 Save scan history (stage: production, warehouse, consumer).
 
-### 📄 GET /products
+### 📤 GET /products
 
 List all products.
 
-### 📄 GET /products/\:qrHash
+### 📤 GET /products/\:qrHash
 
 Find a specific product.
 
-### 📄 GET /scans/\:qrCode
+### 📤 GET /scans/\:qrCode
 
 View full scan history.
 
-### 📄 GET /qr/\:qrHash
+### 📤 GET /qr/\:qrHash
 
 Get a QR image.
 
 ---
 
-## 🧐 Special Contributions & AI Use
+## 🧠 Special Contributions & AI Use
 
 > **ProofMark's database structure and scan logic were significantly refined with AI assistance**, especially for multi-stage scanning.
 
@@ -137,11 +136,11 @@ Project was developed by a solo developer with iterative support and idea shapin
 
 ---
 
-## 🧱 Future Roadmap
+## 🛡️ Future Roadmap
 
 * [ ] 📱 Mobile optimization
 * [ ] 🔐 NFT minting on Solana for each product
-* [ ] 📡 Real-time socket-based scan tracking
+* [ ] 🛡️ Real-time socket-based scan tracking
 * [ ] 🎨 Admin dashboard with scan heatmaps
 
 ---
@@ -157,7 +156,7 @@ MIT License. You can use, modify, or contribute freely.
 | Platform     | Link                                                                                               |
 | ------------ | -------------------------------------------------------------------------------------------------- |
 | 🔗 Twitter/X | [https://x.com/ProofMarkChain](https://x.com/ProofMarkChain)                                       |
-| 💼 LinkedIn  | [https://www.linkedin.com/in/fatihmuhammetuysal/](https://www.linkedin.com/in/fatihmuhammetuysal/) |
+| 👔 LinkedIn  | [https://www.linkedin.com/in/fatihmuhammetuysal/](https://www.linkedin.com/in/fatihmuhammetuysal/) |
 | 💻 GitHub    | [https://github.com/fatihuysalx](https://github.com/fatihuysalx)                                   |
 
 > Feel free to fork the project or reach out if you plan to extend it.
