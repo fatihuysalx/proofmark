@@ -27,6 +27,11 @@ function App() {
         </Routes>
       </div>
 
+      <div>
+      <h1>🧬 ProofMark Ürün Girişi</h1>
+      <AddProductButton />
+    </div>
+
       {/* Footer Her Sayfada Gösterilecek */}
       <Footer />
     </Router>
