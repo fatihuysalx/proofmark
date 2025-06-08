@@ -1,79 +1,39 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const ProofmarkKey = require("./models/ProofmarkKey");
-const { getActiveWallets } = require("./services/walletService");
-const Product = require("./models/product");
-const { initializeProofOnChain } = require("./services/anchorService"); // ✅ Anchor işlemi eklendi
+const anchor = require("@project-serum/anchor");
+const { Connection, clusterApiUrl, PublicKey, SystemProgram, Keypair } = require("@solana/web3.js");
+const idl = require("../../anchor-backend/target/idl/proofmark.json");
+const walletKeypair = require("../../anchor-backend/target/deploy/anchor_backend-keypair.json");
 
-const app = express();
-const PORT = 3000;
+const keypair = Keypair.fromSecretKey(Uint8Array.from(walletKeypair));
+const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
+const wallet = new anchor.Wallet(keypair);
+const provider = new anchor.AnchorProvider(connection, wallet, { commitment: "confirmed" });
+const programId = new PublicKey(idl.address);
+const program = new anchor.Program(idl, programId, provider);
 
-app.use(express.json());
+async function initializeProofOnChain(qrHash) {
+  const [proofPDA] = PublicKey.findProgramAddressSync(
+    [Buffer.from("proof"), Buffer.from(qrHash)],
+    program.programId
+  );
 
-// MongoDB bağlantısı
-mongoose.connect("mongodb://127.0.0.1:27017/proofmark")
-  .then(() => console.log("MongoDB bağlantısı başarılı"))
-  .catch(err => console.error("MongoDB bağlantı hatası:", err));
-
-// ✅ Cüzdanları listele
-app.get("/wallets", async (req, res) => {
   try {
-    const wallets = await getActiveWallets();
-    res.json(wallets);
+    const tx = await program.methods
+      .initializeProof(qrHash, new Array(64).fill(0), new Array(64).fill(0))
+      .accounts({
+        proof: proofPDA,
+        user: provider.wallet.publicKey,
+        systemProgram: SystemProgram.programId,
+      })
+      .rpc();
+
+    console.log("✅ Zincir üstü kayıt başarılı. Tx:", tx);
+    return tx;
   } catch (err) {
-    res.status(500).json({ error: "Wallet verisi alınamadı" });
+    console.error("❌ Zincir üstü kayıt hatası:", err);
+    throw err;
   }
-});
+}
 
-// ✅ Ürün ekleme (POST /products)
-app.post("/products", async (req, res) => {
-  try {
-    const { name, qrHash, description } = req.body;
-
-    // ✅ Zincir üstüne kayıt
-    await initializeProofOnChain(qrHash);
-
-    const newProduct = new Product({ name, qrHash, description });
-    await newProduct.save();
-    res.status(201).json(newProduct);
-  } catch (err) {
-    console.error("Ürün ekleme hatası:", err);
-    res.status(500).json({ error: "Ürün eklenemedi" });
-  }
-});
-
-// ✅ Tüm ürünleri listeleme (GET /products)
-app.get("/products", async (req, res) => {
-  try {
-    const products = await Product.find();
-    res.json(products);
-  } catch (err) {
-    res.status(500).json({ error: "Veriler alınamadı" });
-  }
-});
-
-// ✅ QR hash'e göre ürün çekme (GET /products/:qrHash)
-app.get("/products/:qrHash", async (req, res) => {
-  try {
-    const product = await Product.findOne({ qrHash: req.params.qrHash });
-    if (!product) return res.status(404).json({ error: "Ürün bulunamadı" });
-    res.json(product);
-  } catch (err) {
-    res.status(500).json({ error: "Veri alınamadı" });
-  }
-});
-
-const { generateQR } = require("./services/qrService");
-
-app.get("/qr/:qrHash", async (req, res) => {
-  try {
-    const qrImage = await generateQR(req.params.qrHash);
-    res.send(`<img src="${qrImage}" />`);
-  } catch (err) {
-    res.status(500).json({ error: "QR üretilemedi" });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`Sunucu http://localhost:${PORT} adresinde çalışıyor`);
-});
+module.exports = {
+  initializeProofOnChain,
+};

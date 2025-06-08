@@ -9,10 +9,13 @@ function QRScanner() {
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
-    if (!file) return;
+    if (!file) {
+      alert("Lütfen bir görsel seçin.");
+      return;
+    }
 
     const formData = new FormData();
-    formData.append("file", file);
+    formData.append("qrImage", file); // field name matches backend
 
     try {
       const response = await fetch("http://localhost:5000/upload", {
@@ -21,9 +24,11 @@ function QRScanner() {
       });
 
       const data = await response.json();
-      if (data.decodedText) {
-        setResult(data.decodedText);
-        const historyRes = await fetch(`http://localhost:5000/scans/${data.decodedText}`);
+      if (data.qrCode) {
+        setResult(data.qrCode);
+        const historyRes = await fetch(
+          `http://localhost:5000/scans/${data.qrCode}`
+        );
         const scans = await historyRes.json();
         setScanHistory(scans);
 
@@ -34,7 +39,7 @@ function QRScanner() {
           await fetch("http://localhost:5000/scans", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ qrCode: data.decodedText, stage: "consumer" }),
+            body: JSON.stringify({ qrCode: data.qrCode, stage: "consumer" }),
           });
         }
       } else {
@@ -50,7 +55,12 @@ function QRScanner() {
       <section className="qr-hero">
         <h1>QR Kodunu Tara veya Yükle</h1>
         <p>QR görselini yükleyin, içerik otomatik çözümlenecek.</p>
-        <input type="file" accept="image/*" onChange={handleImageUpload} className="file-upload" />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImageUpload}
+          className="file-upload"
+        />
       </section>
 
       {result && !alreadyScanned && (
@@ -66,8 +76,10 @@ function QRScanner() {
 
       {alreadyScanned && (
         <div className="scan-warning">
-          Bu QR daha önce doğrulanmış: {" "}
-          {new Date(scanHistory.find((s) => s.stage === "consumer").timestamp).toLocaleString()}
+          Bu QR daha önce doğrulanmış:{" "}
+          {new Date(
+            scanHistory.find((s) => s.stage === "consumer").timestamp
+          ).toLocaleString()}
         </div>
       )}
     </div>

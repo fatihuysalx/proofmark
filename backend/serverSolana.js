@@ -1,29 +1,25 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const sha256 = require("js-sha256");
 const qrcode = require("qrcode");
-
 const scanRoutes = require("./routes/scan");
 const uploadRoute = require("./routes/upload");
 const { getActiveWallets } = require("./services/walletService");
-const { writeToStellar } = require("./services/stellarService");
-
 const Product = require("./models/product");
+const { initializeProofOnChain } = require("./services/anchorService");
+
 
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 
 app.use(express.json());
 app.use("/scans", scanRoutes);
 app.use("/upload", uploadRoute);
 
-// ✅ Mongo bağlantısı
 mongoose.connect("mongodb://127.0.0.1:27017/proofmark")
   .then(() => console.log("MongoDB bağlantısı başarılı"))
   .catch(err => console.error("MongoDB bağlantı hatası:", err));
 
-// ✅ Aktif cüzdanları getir
 app.get("/wallets", async (req, res) => {
   try {
     const wallets = await getActiveWallets();
@@ -33,7 +29,6 @@ app.get("/wallets", async (req, res) => {
   }
 });
 
-// ✅ Yeni ürün ekle
 app.post("/products", async (req, res) => {
   try {
     const { name, qrHash, description } = req.body;
@@ -46,7 +41,6 @@ app.post("/products", async (req, res) => {
   }
 });
 
-// ✅ Tüm ürünleri getir
 app.get("/products", async (req, res) => {
   try {
     const products = await Product.find();
@@ -56,7 +50,6 @@ app.get("/products", async (req, res) => {
   }
 });
 
-// ✅ QR hash ile ürün detayını getir
 app.get("/products/:qrHash", async (req, res) => {
   try {
     const product = await Product.findOne({ qrHash: req.params.qrHash });
@@ -67,8 +60,8 @@ app.get("/products/:qrHash", async (req, res) => {
   }
 });
 
-// ✅ QR görseli üret (base64 PNG döner)
 const { generateQR } = require("./services/qrService");
+
 app.get("/qr/:qrHash", async (req, res) => {
   try {
     const qrImage = await generateQR(req.params.qrHash);
@@ -78,7 +71,6 @@ app.get("/qr/:qrHash", async (req, res) => {
   }
 });
 
-// ✅ Identifier al, hashle, QR üret
 app.post("/generate-qr", async (req, res) => {
   const { identifier } = req.body;
   if (!identifier) return res.status(400).send("No identifier");
@@ -88,21 +80,19 @@ app.post("/generate-qr", async (req, res) => {
   res.json({ qr: qrData });
 });
 
-// 🆕 ✅ STELLAR ENTEGRASYONU — zincire hash yaz
-app.post("/stellar", async (req, res) => {
+app.post("/solana", async (req, res) => {
   const { qrHash } = req.body;
   if (!qrHash) return res.status(400).json({ error: "qrHash zorunlu" });
 
   try {
-    const txHash = await writeToStellar(qrHash);
+    const txHash = await initializeProofOnChain(qrHash);
     res.json({ success: true, txHash });
   } catch (err) {
-    console.error("Stellar yazım hatası:", err);
-    res.status(500).json({ error: "Stellar zincire yazılamadı", details: err.message });
+    console.error("Solana yazım hatası:", err);
+    res.status(500).json({ error: "Solana zincire yazılamadı", details: err.message });
   }
 });
 
-// ✅ Server başlatılıyor
 app.listen(PORT, () => {
   console.log(`Sunucu http://localhost:${PORT} adresinde çalışıyor`);
 });
