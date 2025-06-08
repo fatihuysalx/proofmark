@@ -1,0 +1,233 @@
+{
+  "address": "H8fZyW7M7cssxmnjQUDe4pMcLHXdr3WSBaKn3pqFHTAe",
+  "metadata": {
+    "name": "proofmark",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "finalize_proof",
+      "discriminator": [
+        37,
+        46,
+        69,
+        213,
+        53,
+        181,
+        209,
+        138
+      ],
+      "accounts": [
+        {
+          "name": "proof",
+          "writable": true
+        },
+        {
+          "name": "creator",
+          "signer": true,
+          "relations": [
+            "proof"
+          ]
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_proof",
+      "discriminator": [
+        165,
+        188,
+        188,
+        88,
+        25,
+        248,
+        86,
+        93
+      ],
+      "accounts": [
+        {
+          "name": "proof",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "user",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "qr_hash",
+          "type": "string"
+        },
+        {
+          "name": "manufacturer_signature",
+          "type": {
+            "array": [
+              "u8",
+              64
+            ]
+          }
+        },
+        {
+          "name": "proofmark_signature",
+          "type": {
+            "array": [
+              "u8",
+              64
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "update_stage",
+      "discriminator": [
+        159,
+        10,
+        194,
+        3,
+        171,
+        184,
+        44,
+        218
+      ],
+      "accounts": [
+        {
+          "name": "proof",
+          "writable": true
+        },
+        {
+          "name": "creator",
+          "signer": true,
+          "relations": [
+            "proof"
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "next_stage",
+          "type": {
+            "defined": {
+              "name": "Stage"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Proof",
+      "discriminator": [
+        163,
+        35,
+        13,
+        71,
+        15,
+        128,
+        63,
+        82
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "AlreadyUsed",
+      "msg": "QR code has already been finalized."
+    }
+  ],
+  "types": [
+    {
+      "name": "Proof",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "qr_hash",
+            "type": "string"
+          },
+          {
+            "name": "is_used",
+            "type": "bool"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "manufacturer_signature",
+            "type": {
+              "array": [
+                "u8",
+                64
+              ]
+            }
+          },
+          {
+            "name": "proofmark_signature",
+            "type": {
+              "array": [
+                "u8",
+                64
+              ]
+            }
+          },
+          {
+            "name": "current_stage",
+            "type": {
+              "defined": {
+                "name": "Stage"
+              }
+            }
+          },
+          {
+            "name": "used_at",
+            "type": {
+              "option": "i64"
+            }
+          },
+          {
+            "name": "used_by",
+            "type": {
+              "option": "pubkey"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "Stage",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "RawMaterial"
+          },
+          {
+            "name": "InProduction"
+          },
+          {
+            "name": "FinishedProduct"
+          },
+          {
+            "name": "InStore"
+          }
+        ]
+      }
+    }
+  ]
+}
